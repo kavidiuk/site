@@ -7,11 +7,11 @@ import {
   List,
   ListItem,
   ListItemText,
-  useMediaQuery,
 } from "@mui/material";
-import image from "../assets/images/samsung.jpg";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import Gif from "../assets/utils/Gif";
+import AnimatedButton from "../components/AnimatedButton";
 
 export default function HomePage() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -19,17 +19,6 @@ export default function HomePage() {
   const toggleDrawer = (open: boolean) => {
     setOpenMenu(open);
   };
-
-  const isSmallScreen = useMediaQuery("(max-width:600px)");
-  const isMediumScreen = useMediaQuery(
-    "(min-width:601px) and (max-width:960px)"
-  );
-
-  const imageWidth = isSmallScreen
-    ? "100%" // Per schermi piccoli
-    : isMediumScreen
-    ? "60%" // Per schermi medi
-    : "30rem"; // Per schermi grandi
 
   return (
     <>
@@ -228,28 +217,72 @@ export default function HomePage() {
         sx={{
           backgroundColor: "#E8E4E4",
           display: "flex",
-          // justifyContent: "center",
-          flexDirection: "column",
-          height: { xs: "50vh", md: "60vh" },
+          justifyContent: "center",
+          flexDirection: { xs: "column", md: "row" },
+          // justifyContent: { xs: "center", md: "space-between" },
+          alignItems: "center",
+          height: { xs: "auto", md: "60vh" }, // 50vh
+          padding: "2rem",
+          gap: { xs: "2rem", md: "3rem" },
         }}
       >
         <Box
           sx={{
-            padding: "0 2rem",
-            margin: "2rem",
+            // padding: "0 2rem",
+            margin: "2rem 0", // 0
             display: "flex",
             justifyContent: "center",
+            width: {
+              xl: "35rem",
+              lg: "30rem",
+              md: "27rem",
+              sm: "22rem",
+              xs: "19rem",
+            },
           }}
         >
-          <img
-            src={image}
-            alt="Foto video template"
-            style={{
-              width: imageWidth,
-              display: "block",
-              margin: "0 auto",
-            }}
-          />
+          <Gif />
+        </Box>
+        <Box
+          sx={{
+            padding: "2rem", //3
+            textAlign: { xs: "center", md: "left" }, //
+            maxWidth: "500px",
+          }}
+        >
+          <Typography
+            variant="h5"
+            color="black"
+            fontWeight="bold"
+            sx={{ mb: 2 }}
+          >
+            Crea un lorem ipsum
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ color: "gray", marginBottom: "1.5rem", lineHeight: 1.6 }}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+            officiis dolorum sequi eos deserunt tenetur alias. Natus minima,
+            consectetur suscipit, repudiandae ducimus
+          </Typography>
+          <Typography
+            variant="h5"
+            color="black"
+            fontWeight="bold"
+            sx={{ mb: 2 }}
+          >
+            Crea un lorem Ipsum
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ color: "gray", marginBottom: "2rem", lineHeight: 1.6 }}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+            officiis dolorum sequi eos deserunt tenetur alias. Natus minima,
+            consectetur suscipit, repudiandae ducimus
+          </Typography>
+          <AnimatedButton text={"Hover me"} />
         </Box>
       </Box>
     </>
