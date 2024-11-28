@@ -7,6 +7,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  useMediaQuery,
 } from "@mui/material";
 import image from "../assets/images/samsung.jpg";
 import { useState } from "react";
@@ -18,6 +19,17 @@ export default function HomePage() {
   const toggleDrawer = (open: boolean) => {
     setOpenMenu(open);
   };
+
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isMediumScreen = useMediaQuery(
+    "(min-width:601px) and (max-width:960px)"
+  );
+
+  const imageWidth = isSmallScreen
+    ? "100%" // Per schermi piccoli
+    : isMediumScreen
+    ? "60%" // Per schermi medi
+    : "30rem"; // Per schermi grandi
 
   return (
     <>
@@ -158,15 +170,23 @@ export default function HomePage() {
       <Box
         sx={{
           backgroundColor: "#EDEDED",
-          height: "40vh",
+          height: { md: "34vh", xs: "33vh", lg: "30vh", xl: "38vh" },
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           flexDirection: { xs: "column", md: "row" },
-          padding: "5%",
+          py: { xl: "0rem", sm: "3rem", xs: "2rem" },
+          px: { xs: "1rem", md: "9rem", lg: "15rem" },
+          gap: { md: "0", sm: "1.5rem", xs: "1rem" },
         }}
       >
-        <Box sx={{ textAlign: { xs: "center", md: "left" }, maxWidth: "50%" }}>
+        {/* Primo blocco: Titolo e descrizione */}
+        <Box
+          sx={{
+            textAlign: { xs: "center", md: "left" },
+            width: { xs: "100%", sm: "60%", md: "50%" },
+          }}
+        >
           <Typography
             variant="h4"
             fontWeight="bold"
@@ -176,13 +196,13 @@ export default function HomePage() {
             Lorem Ipsum
           </Typography>
           <Typography sx={{ fontSize: "1.1rem", opacity: 0.8 }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-            Obcaecati rem cupiditate architecto dolore consectetur <br />
-            voluptatem officiis, pariatur vel non, neque, facere <br />
-            eos amet voluptatibus impedit laudantium quas. Illo, <br />
-            illum aspernatur?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+            rem cupiditate architecto dolore consectetur voluptatem officiis,
+            pariatur vel non, neque, facere eos amet voluptatibus impedit
+            laudantium quas. Illo, illum aspernatur?
           </Typography>
         </Box>
+        {/* Secondo blocco: Bottone */}
         <Button
           variant="contained"
           sx={{
@@ -197,7 +217,7 @@ export default function HomePage() {
               backgroundColor: "#FFC107",
               boxShadow: "0px 6px 10px rba(0, 0, 0, 0.2)",
             },
-            mt: { xs: "20px", md: 0 }, // margine aggiunto per mobile
+            //  marginTop: { xs: "0", md: "0" },
           }}
         >
           Scopri di più
@@ -225,7 +245,7 @@ export default function HomePage() {
             src={image}
             alt="Foto video template"
             style={{
-              width: "40rem",
+              width: imageWidth,
               display: "block",
               margin: "0 auto",
             }}
