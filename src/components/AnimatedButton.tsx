@@ -7,6 +7,7 @@ interface LiquidButtonProps {
   hoverTextColor?: string;
   backgroundColor?: string;
   animationDuration?: string;
+  onClick?: () => void;
 }
 
 const LiquidButton: React.FC<LiquidButtonProps> = ({
@@ -15,6 +16,7 @@ const LiquidButton: React.FC<LiquidButtonProps> = ({
   hoverTextColor = "#fff",
   backgroundColor = "#000",
   animationDuration = "0.3s",
+  onClick,
 }) => {
   return (
     <Box
@@ -29,7 +31,6 @@ const LiquidButton: React.FC<LiquidButtonProps> = ({
         fontWeight: "bold",
         textTransform: "uppercase",
         border: `2px solid ${textColor}`,
-        // borderRadius: "8px",
         backgroundColor: "transparent",
         transition: `color ${animationDuration} ease-in-out`,
         "&:hover": {
@@ -39,6 +40,7 @@ const LiquidButton: React.FC<LiquidButtonProps> = ({
           transform: "translateX(0)",
         },
       }}
+      onClick={onClick}
     >
       <span
         style={{
