@@ -65,8 +65,10 @@ const HomePage = () => (
             opacity: 0.8,
           }}
         >
-          Creiamo esperienze digitali uniche e personalizzate per ogni tua
-          esigenza.
+          Sei alla ricerca di un partner per trasformare le tue idee in
+          soluzioni digitali all'avanguardia? offriamo servizi di sviluppo web
+          personalizzati, ideali, per portare la tua attività online e farla
+          crescere. `
         </Typography>
 
         {/* Call-to-Action */}
@@ -116,13 +118,13 @@ const HomePage = () => (
           color="black"
           sx={{ marginBottom: "1rem" }}
         >
-          Lorem Ipsum
+          Soluzioni su misura
         </Typography>
         <Typography sx={{ fontSize: "1.1rem", opacity: 0.8 }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
-          rem cupiditate architecto dolore consectetur voluptatem officiis,
-          pariatur vel non, neque, facere eos amet voluptatibus impedit
-          laudantium quas. Illo, illum aspernatur?
+          Con anni di esperienza nello sviluppo di applicazioni web, offriamo
+          soluzioni su misura per migliorare la tua esperienza digitale. Dai
+          siti web interattivi alle piattaforme gestionali, il nostro obiettivo
+          è creare esperienze intuitive e di impatto.
         </Typography>
       </Box>
 
@@ -184,15 +186,17 @@ const HomePage = () => (
         }}
       >
         <Typography variant="h5" color="black" fontWeight="bold" sx={{ mb: 2 }}>
-          Crea un lorem ipsum
+          innovazione su musura
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: "gray", marginBottom: "1.5rem", lineHeight: 1.6 }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officiis
-          dolorum sequi eos deserunt tenetur alias. Natus minima, consectetur
-          suscipit, repudiandae ducimus
+          Grazie alla nostra competenza in tecnologie moderne, garantiamo
+          prodotti affidabili, scalabili e dal design curato, Qualunque sia la
+          tua esigenza - un sito web, un'applicazione aziendale o una
+          piattaforma per la gestione dei tuoi dati - siamo pronti a
+          realizzarla.
         </Typography>
         <AnimatedButton
           text="Hover me"
@@ -217,8 +221,7 @@ const HomePage = () => (
       }}
     >
       <Typography variant="h4" color="initial" fontWeight="150">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
-        asperiores ex
+        Pronto a iniziare?
       </Typography>
 
       <Box>
@@ -230,10 +233,10 @@ const HomePage = () => (
             fontWeight: { xs: "80", md: "130" },
           }}
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
-          atque tenetur perspiciatis eum, fugit veritatis totam animi earum
-          excepturi, temporibus illum tempore alias? Explicabo incidunt nostrum
-          nemo, nisi eaque ab?
+          Offriamo servizi completi, dalla progettazione alla realizzazione, per
+          creare prodotti digitali che si distinguono. Che tu sia un
+          imprenditore, un professionista o una PMI, le nostre soluzione sono
+          pensate per adattarsi perfettamente alle tue esigenze.
         </Typography>
         <AnimatedButton
           text="Vedi"
