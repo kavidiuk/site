@@ -85,6 +85,12 @@ const HomePage = () => (
               backgroundColor: "#FFC107",
             },
           }}
+          onClick={() => {
+            window.scrollTo({
+              top: 700,
+              behavior: "smooth",
+            });
+          }}
         >
           Scopri di più
         </Button>

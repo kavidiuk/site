@@ -11,12 +11,11 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-
 const pages = [
-  { name: "Home", link: "#" },
+  { name: "Home", link: `/` },
   { name: "Features", link: "#features" },
   { name: "Pricing", link: "#pricing" },
-  { name: "Contact", link: "#contact" },
+  { name: "Contact", link: "/ChiSiamo" },
 ];
 
 export function Navbar() {
@@ -26,7 +25,7 @@ export function Navbar() {
     setDrawerOpen(open);
   };
 
-  const [visibile, setVisibile] = React.useState(false);
+  const [visibile, setVisibile] = React.useState(true);
   const prevScrollY = React.useRef(0);
 
   const handleScroll = () => {

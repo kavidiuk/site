@@ -115,7 +115,7 @@ const AboutUs = () => {
             }}
           />
           <Typography variant="h6" fontWeight="bold" color="#333">
-            [Il tuo nome]
+            Kavidu Francesco
           </Typography>
           <Typography variant="body2" color="#555">
             Sviluppatore Full Stack e fondatore
